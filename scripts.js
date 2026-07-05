@@ -1,4 +1,3 @@
-
 let cart = [];
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,6 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const tipoEntrega = document.getElementById("tipoEntrega");
     if (tipoEntrega) {
         tipoEntrega.addEventListener("change", mostrarDireccion);
+    }
+
+    // CONEXIÓN CON EL BOTÓN "FINALIZAR PEDIDO" DEL MODAL
+    const btnFinalizarPedido = document.querySelector("#modalPago .btn-success");
+    if (btnFinalizarPedido) {
+        btnFinalizarPedido.addEventListener("click", finalizarCompraWeb);
     }
 });
 
@@ -92,3 +97,134 @@ function mostrarDireccion() {
     }
 }
 
+// Elementos de la interfaz para autenticación
+const inputEmail = document.getElementById('auth-email');
+const inputPassword = document.getElementById('auth-password');
+const btnLogin = document.getElementById('btn-login');
+const btnRegistro = document.getElementById('btn-registro');
+const mensajeUsuario = document.getElementById('mensaje-usuario');
+
+function mostrarNotificacion(mensaje, esExito = false) {
+    mensajeUsuario.innerText = mensaje;
+    mensajeUsuario.style.display = 'block';
+    mensajeUsuario.style.color = esExito ? '#28a745' : '#dc3545';
+}
+
+// 1. PETICIÓN ASÍNCRONA PARA REGISTRO DE USUARIOS
+btnRegistro.addEventListener('click', async () => {
+    const email = inputEmail.value;
+    const password = inputPassword.value;
+
+    if (!email || !password) {
+        mostrarNotificacion('Por favor, completa todos los campos.');
+        return;
+    }
+
+    try {
+        const respuesta = await fetch('http://localhost:3000/api/registro', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+
+        const data = await respuesta.json();
+
+        if (!respuesta.ok) {
+            mostrarNotificacion(data.error || 'No se pudo completar el registro.');
+            return;
+        }
+
+        mostrarNotificacion('¡Registro exitoso! Ahora puedes iniciar sesión.', true);
+        inputPassword.value = ''; 
+
+    } catch (error) {
+        console.error('Error de red:', error);
+        mostrarNotificacion('No hay conexión con el servidor. Inténtalo más tarde.');
+    }
+});
+
+// 2. PETICIÓN ASÍNCRONA PARA INICIAR SESIÓN (Obtención de JWT)
+btnLogin.addEventListener('click', async () => {
+    const email = inputEmail.value;
+    const password = inputPassword.value;
+
+    if (!email || !password) {
+        mostrarNotificacion('Ingresa tus credenciales completas.');
+        return;
+    }
+
+    try {
+        const respuesta = await fetch('http://localhost:3000/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+
+        const data = await respuesta.json();
+
+        if (!respuesta.ok) {
+            mostrarNotificacion(data.error || 'Credenciales incorrectas.');
+            return;
+        }
+
+        localStorage.setItem('token_alocados', data.token);
+        mostrarNotificacion(`¡Bienvenido, ${data.usuario.email}! Sesión iniciada correctamente.`, true);
+        
+    } catch (error) {
+        console.error('Error de red:', error);
+        mostrarNotificacion('Error de red al intentar conectar con el servidor.');
+    }
+});
+
+// 3. ENVIAR LA COMPRA AL BACKEND (Transactional Outbox + Validación de JWT)
+async function finalizarCompraWeb() {
+    const token = localStorage.getItem('token_alocados');
+
+    if (!token) {
+        alert('Debes iniciar sesión con tu cuenta para poder finalizar el pedido.');
+        return;
+    }
+
+    // Calculamos el total y mapeamos los nombres de los productos del carrito actual
+    let totalCompra = cart.reduce((sum, item) => sum + item.precio, 0);
+    let nombresProductos = cart.map(item => item.nombre);
+
+    try {
+        const respuesta = await fetch('http://localhost:3000/api/comprar', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}` // Formato Bearer Token
+            },
+            body: JSON.stringify({
+                total: totalCompra,
+                items: nombresProductos
+            })
+        });
+
+        const data = await respuesta.json();
+
+        if (!respuesta.ok) {
+            alert(data.error || 'Ocurrió un problema al procesar la transacción.');
+            return;
+        }
+
+        // Notificación de éxito en pantalla
+        alert(`¡Pedido #${data.pedidoId} realizado con éxito! Tu orden ha sido registrada en el sistema.`);
+        
+        // Limpiamos el carrito e interfaz tras la venta exitosa
+        cart = [];
+        actualizarCarritoUI();
+
+        // Cerramos el modal de Bootstrap automáticamente
+        const modalElemento = document.getElementById('modalPago');
+        const modalInstancia = bootstrap.Modal.getInstance(modalElemento);
+        if (modalInstancia) {
+            modalInstancia.hide();
+        }
+
+    } catch (error) {
+        console.error('Error enviando la compra:', error);
+        alert('Error de red al intentar conectar con el servidor backend.');
+    }
+}
