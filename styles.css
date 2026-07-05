@@ -1,0 +1,87 @@
+:root {
+    --dark: #03071E;
+    --red: #D00000;
+    --orange: #FAA307;
+    --white: #ffffff;
+}
+
+body {
+    background-color: #000;
+    color: var(--white);
+    font-family: 'Segoe UI', sans-serif;
+    padding-top: 16px;
+}
+
+.navbar-brand, .nav-link, .menu-title {
+    color: var(--orange) !important;
+}
+
+.navbar-big        { padding-top: 1rem; padding-bottom: 1rem; }
+.navbar-big .brand { font-size: 1.75rem; }
+.navbar-big .link  { font-size: 1.25rem; }
+
+
+.category-box {
+    border: 2px solid var(--orange);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    scroll-margin-top: 110px;
+}
+
+.menu-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.subitem {
+    background-color: #111;
+    padding: 0.5rem 1rem;
+    border-left: 4px solid var(--red);
+    margin: 0.25rem 0;
+    cursor: pointer;
+}
+
+.footer {
+    border-top: 2px solid var(--orange);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--orange);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.card-img-top {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 380px;
+    width: auto;          /* se ajusta al ancho de la card sin deformarse */
+    object-fit: cover;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----- Logo centrado ----- */
+.logo-header {
+    max-height: 220px;          /* limita la altura para que no se agrande de más */
+}
+
+/* (opcional) espacio extra debajo del logo para que no quede pegado al menú */
+header + .navbar.sticky-top {
+    margin-top: -1px;           /* quita la línea doble que deja Bootstrap */
+}

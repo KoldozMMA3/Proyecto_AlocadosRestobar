@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alocados Restobar</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- ====== LOGO HEADER (no sticky) ====== -->
+<header class="bg-dark py-3 text-center">
+    <a href="#">
+        <img src="img/logo.png"
+             alt="AlocadosRestobar"
+             class="logo-header img-fluid"
+             height="220">   <!-- ajustá la altura a tu gusto -->
+    </a>
+</header>
+
+<nav class="navbar navbar-expand-lg bg-dark px-3 sticky-top py-3">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="img/logo.png" alt="Alocados Restobar"
+        height="40" class="d-inline-block align-text-top me-2">
+    </a>
+    <!-- resto del menú -->
+    <button class="navbar-toggler" ></button>
+    <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link fs-5" href="#salchipapas">Salchipapas</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#alitas">Alitas</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#posha">Posha Broaster</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#hamburguesas">Hamburguesas</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#alas-salsas">Alitas con Salsas</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#combos">Combos Alocados</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#bebidas">Bebidas</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#asociacion">Asociación Unámonos</a></li>
+            <li class="nav-item"><a class="nav-link fs-5" href="#footer">Contáctanos</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container py-4">
+    <div class="text-center mb-4">
+        <h1>Delicias Alocadas</h1>
+    </div>
+
+    <div class="category-box" id="salchipapas">
+        <div class="menu-title">Salchipapas Combinadas</div>
+        <p>Usted Puede Combinarlas a su Gusto.</p>
+
+        <div id="carouselSalchipapas" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- ITEM 1 -->
+                <div class="carousel-item active">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/papi_clasica.png" class="card-img-top img-fluid" alt="Papi Clásica">
+                        <div class="card-body">
+                            <h5 class="card-title">Papi Clásica</h5>
+                            <p class="card-text">Papas, salchicha, arroz y fideo. La receta clásica de siempre.</p>
+                            <p class="text-warning fw-bold">S/. 7.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Papi Clásica', 7.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/papi_ahumada.png" class="card-img-top img-fluid" alt="Papi Ahumada">
+                        <div class="card-body">
+                            <h5 class="card-title">Papi Ahumada</h5>
+                            <p class="card-text">Papas, salchicha ahumada, arroz y fideo.</p>
+                            <p class="text-warning fw-bold">S/. 8.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Papi Ahumada', 8.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/papi_loco.png" class="card-img-top img-fluid" alt="Papi Loco">
+                        <div class="card-body">
+                            <h5 class="card-title">Papi Loco</h5>
+                            <p class="card-text">Papas, chorizo, salchicha clásica y ahumada.</p>
+                            <p class="text-warning fw-bold">S/. 12.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Papi Loco', 12.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/papi_carguero.png" class="card-img-top img-fluid" alt="Papi Carguero">
+                        <div class="card-body">
+                            <h5 class="card-title">Papi Carguero</h5>
+                            <p class="card-text">Papas, salchicha, huevo, chorizo, fideos y arroz.</p>
+                            <p class="text-warning fw-bold">S/. 12.50</p>
+                            <button class="btn btn-warning" onclick="addToCart('Papi Carguero', 12.50)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 5 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/papi_soli.png" class="card-img-top img-fluid" alt="Papi Soli">
+                        <div class="card-body">
+                            <h5 class="card-title">Papi Soli</h5>
+                            <p class="card-text">Papas, salchicha y cremas. Perfecta para una sola persona.</p>
+                            <p class="text-warning fw-bold">S/. 7.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Papi Soli', 7.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 6 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/papi_huevon.png" class="card-img-top img-fluid" alt="Papi Huevón">
+                        <div class="card-body">
+                            <h5 class="card-title">Papi Huevón</h5>
+                            <p class="card-text">Papas, salchicha y huevo. Tradicional con un extra de proteína.</p>
+                            <p class="text-warning fw-bold">S/. 9.50</p>
+                            <button class="btn btn-warning" onclick="addToCart('Papi Huevón', 9.50)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 7 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/papi_chori.png" class="card-img-top img-fluid" alt="Papi Chori">
+                        <div class="card-body">
+                            <h5 class="card-title">Papi Chori</h5>
+                            <p class="card-text">Papas, salchicha y chorizo. La combinación poderosa.</p>
+                            <p class="text-warning fw-bold">S/. 11.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Papi Chori', 11.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 8 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/papi_fino.png" class="card-img-top img-fluid" alt="Papi Fino">
+                        <div class="card-body">
+                            <h5 class="card-title">Papi Fino</h5>
+                            <p class="card-text">Papas, tocino, salchicha y huevo. Para los de paladar fino.</p>
+                            <p class="text-warning fw-bold">S/. 11.50</p>
+                            <button class="btn btn-warning" onclick="addToCart('Papi Fino', 11.50)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 9 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/papi_toxico.png" class="card-img-top img-fluid" alt="Papi Tóxico">
+                        <div class="card-body">
+                            <h5 class="card-title">Papi Tóxico</h5>
+                            <p class="card-text">Papas, salchicha ahumada, salchicha clásica, tocino y chorizo.</p>
+                            <p class="text-warning fw-bold">S/. 14.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Papi Tóxico', 14.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSalchipapas" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSalchipapas" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+        <div class="category-box" id="alitas">
+            <div class="menu-title">Alitas</div>
+            <p>Todos los combos de Alitas tienen Matecito caliente de Cortesía.</p>
+
+            <div id="carouselAlitas" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <!-- ITEM 1 -->
+                    <div class="carousel-item active">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/alitas_clasica.png" class="card-img-top" alt="Alitas Clásica">
+                            <div class="card-body">
+                                <h5 class="card-title">Alitas Clásica</h5>
+                                <p class="card-text">Papas, 2 alitas, arroz, fideos.</p>
+                                <p class="text-warning fw-bold">S/ 10.00</p>
+                                <button class="btn btn-warning" onclick="addToCart('Alitas Clásica', 10.00)">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 2 -->
+                    <div class="carousel-item">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/alitas_urbana.png" class="card-img-top" alt="Alitas Urbana">
+                            <div class="card-body">
+                                <h5 class="card-title">Alitas Urbana</h5>
+                                <p class="card-text">Papas, 2 alitas, salchicha, fideos, arroz.</p>
+                                <p class="text-warning fw-bold">S/ 11.50</p>
+                                <button class="btn btn-warning" onclick="addToCart('Alitas Urbana', 11.50)">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 3 -->
+                    <div class="carousel-item">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/alitas_glotona.jpg" class="card-img-top" alt="Alitas Glotona">
+                            <div class="card-body">
+                                <h5 class="card-title">Alitas Glotona</h5>
+                                <p class="card-text">Papas, 2 alitas, huevo, salchicha, fideos, arroz.</p>
+                                <p class="text-warning fw-bold">S/ 13.00</p>
+                                <button class="btn btn-warning" onclick="addToCart('Alitas Glotona', 13.00)">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 4 -->
+                    <div class="carousel-item">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/alitas_cargueras.jpg" class="card-img-top" alt="Alitas Cargueras">
+                            <div class="card-body">
+                                <h5 class="card-title">Alitas Cargueras</h5>
+                                <p class="card-text">Papas, 2 alitas, chorizo, salchicha, huevo, arroz, fideo.</p>
+                                <p class="text-warning fw-bold">S/ 16.00</p>
+                                <button class="btn btn-warning" onclick="addToCart('Alitas Cargueras', 16.00)">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 5 -->
+                    <div class="carousel-item">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/alitas_soli.jpg" class="card-img-top" alt="Alitas Soli">
+                            <div class="card-body">
+                                <h5 class="card-title">Alitas Soli</h5>
+                                <p class="card-text">Papas, 2 alitas, cremas.</p>
+                                <p class="text-warning fw-bold">S/ 11.00</p>
+                                <button class="btn btn-warning" onclick="addToCart('Alitas Soli', 11.00)">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 6 -->
+                    <div class="carousel-item">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/alitas_combinadas.jpg" class="card-img-top" alt="Alitas Combinadas">
+                            <div class="card-body">
+                                <h5 class="card-title">Alitas Combinadas</h5>
+                                <p class="card-text">Papas, 2 alitas, salchicha clásica, salchicha ahumada.</p>
+                                <p class="text-warning fw-bold">S/ 13.50</p>
+                                <button class="btn btn-warning" onclick="addToCart('Alitas Combinadas', 13.50)">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 7 -->
+                    <div class="carousel-item">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/alitas_cri_cri.jpg" class="card-img-top" alt="Alitas Cri Cri">
+                            <div class="card-body">
+                                <h5 class="card-title">Alitas Cri Cri</h5>
+                                <p class="card-text">Papas, 2 alitas, salchicha, huevo, queso encima.</p>
+                                <p class="text-warning fw-bold">S/ 14.50</p>
+                                <button class="btn btn-warning" onclick="addToCart('Alitas Cri Cri', 14.50)">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 8 -->
+                    <div class="carousel-item">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/alitas_especiales.jpg" class="card-img-top" alt="Alitas Especiales">
+                            <div class="card-body">
+                                <h5 class="card-title">Alitas Especiales</h5>
+                                <p class="card-text">Papas, 2 alitas, salchicha, chorizo, huevo, tocino, queso encima.</p>
+                                <p class="text-warning fw-bold">S/ 17.50</p>
+                                <button class="btn btn-warning" onclick="addToCart('Alitas Especiales', 17.50)">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlitas" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselAlitas" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+    <div class="category-box" id="posha">
+        <div class="menu-title">Posha Broaster</div>
+        <p>Disfruta nuestras combinaciones al estilo Alocados.</p>
+
+        <div id="carouselPosha" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- ITEM 1 -->
+                <div class="carousel-item active">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/posha_clasica.jpg" class="card-img-top" alt="Posha Clásica">
+                        <div class="card-body">
+                            <h5 class="card-title">Posha Clásica</h5>
+                            <p class="card-text">Papas, broaster, arroz y fideos.</p>
+                            <p class="text-warning fw-bold">S/. 10.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Posha Clásica', 10.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/posha_urbana.jpg" class="card-img-top" alt="Posha Urbana">
+                        <div class="card-body">
+                            <h5 class="card-title">Posha Urbana</h5>
+                            <p class="card-text">Papas, broaster, salchicha, fideos, arroz.</p>
+                            <p class="text-warning fw-bold">S/. 11.50</p>
+                            <button class="btn btn-warning" onclick="addToCart('Posha Urbana', 11.50)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/posha_glotona.jpg" class="card-img-top" alt="Posha Glotona">
+                        <div class="card-body">
+                            <h5 class="card-title">Posha Glotona</h5>
+                            <p class="card-text">Papas, broaster, salchicha, huevo, fideos y arroz.</p>
+                            <p class="text-warning fw-bold">S/. 13.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Posha Glotona', 13.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/posha_carguera.jpg" class="card-img-top" alt="Posha Carguera">
+                        <div class="card-body">
+                            <h5 class="card-title">Posha Carguera</h5>
+                            <p class="card-text">Papas, broaster, salchicha, chorizo, huevo, arroz.</p>
+                            <p class="text-warning fw-bold">S/. 16.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Posha Carguera', 16.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 5 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/posha_soli.jpg" class="card-img-top" alt="Posha Soli">
+                        <div class="card-body">
+                            <h5 class="card-title">Posha Soli</h5>
+                            <p class="card-text">Papas, broaster, cremas.</p>
+                            <p class="text-warning fw-bold">S/. 11.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Posha Soli', 11.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 6 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/posha_combinadas.jpg" class="card-img-top" alt="Posha Combinadas">
+                        <div class="card-body">
+                            <h5 class="card-title">Posha Combinadas</h5>
+                            <p class="card-text">Papas, broaster, salchicha clásica y ahumada.</p>
+                            <p class="text-warning fw-bold">S/. 13.50</p>
+                            <button class="btn btn-warning" onclick="addToCart('Posha Combinadas', 13.50)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 7 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/posha_cri_cri.jpg" class="card-img-top" alt="Posha Cri Cri">
+                        <div class="card-body">
+                            <h5 class="card-title">Posha Cri Cri</h5>
+                            <p class="card-text">Papas, broaster, salchicha, huevo, queso encima.</p>
+                            <p class="text-warning fw-bold">S/. 14.50</p>
+                            <button class="btn btn-warning" onclick="addToCart('Posha Cri Cri', 14.50)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 8 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/posha_especiales.jpg" class="card-img-top" alt="Posha Especiales">
+                        <div class="card-body">
+                            <h5 class="card-title">Posha Especiales</h5>
+                            <p class="card-text">Papas, broaster, salchicha, chorizo, huevo, tocino, queso encima.</p>
+                            <p class="text-warning fw-bold">S/. 17.50</p>
+                            <button class="btn btn-warning" onclick="addToCart('Posha Especiales', 17.50)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 9 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/monstritos_broaster.jpg" class="card-img-top" alt="Monstritos Broaster">
+                        <div class="card-body">
+                            <h5 class="card-title">Monstritos Broaster</h5>
+                            <p class="card-text">Papas + broaster + arroz chaufa cargado.</p>
+                            <p class="text-warning fw-bold">S/. 13.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Monstritos Broaster', 13.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 10 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/arroz_chaufa.jpg" class="card-img-top" alt="Arroz Chaufa">
+                        <div class="card-body">
+                            <h5 class="card-title">Arroz Chaufa</h5>
+                            <p class="card-text">Arroz chaufa tradicional estilo Alocados.</p>
+                            <p class="text-warning fw-bold">S/. 9.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Arroz Chaufa', 9.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 11 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/pecho_broaster.jpg" class="card-img-top" alt="1/4 Broaster Pecho">
+                        <div class="card-body">
+                            <h5 class="card-title">1/4 Broaster Pecho</h5>
+                            <p class="card-text">Pecho de pollo broaster, ideal para los que prefieren lo jugoso.</p>
+                            <p class="text-warning fw-bold">S/. 19.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('1/4 Broaster Pecho', 19.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 12 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/pierna_broaster.jpg" class="card-img-top" alt="1/4 Broaster Pierna">
+                        <div class="card-body">
+                            <h5 class="card-title">1/4 Broaster Pierna</h5>
+                            <p class="card-text">Pierna de pollo broaster, crujiente por fuera y suave por dentro.</p>
+                            <p class="text-warning fw-bold">S/. 18.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('1/4 Broaster Pierna', 18.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPosha" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPosha" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="category-box" id="hamburguesas">
+        <div class="menu-title">Hamburguesas</div>
+        <p>Hamburguesas de POLLO o CARNE. Incluyen papas y ensalada.</p>
+
+        <div id="carouselHamburguesas" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- ITEM 1 -->
+                <div class="carousel-item active">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/hamburguesa_clasica.jpg" class="card-img-top" alt="Hamburguesa Clásica">
+                        <div class="card-body">
+                            <h5 class="card-title">Hamburguesa Clásica</h5>
+                            <p class="card-text">Pan, hamburguesa, queso cheddar, papas y ensalada.</p>
+                            <p class="text-warning fw-bold">S/. 6.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Hamburguesa Clásica', 6.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/hamburguesa_huevona.jpg" class="card-img-top" alt="Hamburguesa Huevona">
+                        <div class="card-body">
+                            <h5 class="card-title">Hamburguesa Huevona</h5>
+                            <p class="card-text">Pan, hamburguesa, queso cheddar, huevo, papas y ensalada.</p>
+                            <p class="text-warning fw-bold">S/. 7.50</p>
+                            <button class="btn btn-warning" onclick="addToCart('Hamburguesa Huevona', 7.50)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/hamburguesa_toxica.jpg" class="card-img-top" alt="Hamburguesa Tóxica">
+                        <div class="card-body">
+                            <h5 class="card-title">Hamburguesa Tóxica</h5>
+                            <p class="card-text">Pan, hamburguesa, queso cheddar, 2 tocinos, papas y ensalada.</p>
+                            <p class="text-warning fw-bold">S/ 10.50</p>
+                            <button class="btn btn-warning" onclick="addToCart('Hamburguesa Tóxica', 10.50)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/hamburguesa_carguera.jpg" class="card-img-top" alt="Hamburguesa Carguera">
+                        <div class="card-body">
+                            <h5 class="card-title">Hamburguesa Carguera</h5>
+                            <p class="card-text">Pan, hamburguesa, queso cheddar, tocino, chorizo, papas y ensalada.</p>
+                            <p class="text-warning fw-bold">S/ 12.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Hamburguesa Carguera', 12.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 5 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/hamburguesa_carguera_x2.jpg" class="card-img-top" alt="Hamburguesa Carguera X2">
+                        <div class="card-body">
+                            <h5 class="card-title">Hamburguesa Carguera X2</h5>
+                            <p class="card-text">Pan, 2 hamburguesas, 2 queso cheddar, huevo, tocino, papas y ensalada.</p>
+                            <p class="text-warning fw-bold">S/ 14.50</p>
+                            <button class="btn btn-warning" onclick="addToCart('Hamburguesa Carguera X2', 14.50)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHamburguesas" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHamburguesas" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="category-box" id="alas-salsas">
+        <div class="menu-title">Alas con Salsas</div>
+        <p>Elige entre estos 3 sabores. <br><strong>Lunes a viernes:</strong> solo con papa frita. <br><strong>Sábado y domingo:</strong> con chaufa cargado + papa frita.</p>
+
+        <div id="carouselAlasSalsas" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- ITEM 1 -->
+                <div class="carousel-item active">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/alas_bbq.jpg" class="card-img-top" alt="Alas BBQ">
+                        <div class="card-body">
+                            <h5 class="card-title">Alas BBQ</h5>
+                            <p class="card-text">6 deliciosas alitas bañadas en salsa dulce BBQ + papa frita.</p>
+                            <p class="text-warning fw-bold">S/. 18.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Alas BBQ', 18.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/alas_acevichadas.jpg" class="card-img-top" alt="Alas Acevichadas">
+                        <div class="card-body">
+                            <h5 class="card-title">Alas Acevichadas</h5>
+                            <p class="card-text">6 alitas bañadas con crema picosa especial + papa frita.</p>
+                            <p class="text-warning fw-bold">S/. 18.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Alas Acevichadas', 18.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/alas_buffalo.jpg" class="card-img-top" alt="Alas Buffalo">
+                        <div class="card-body">
+                            <h5 class="card-title">Alas Buffalo</h5>
+                            <p class="card-text">6 alitas bañadas con crema dulce BBQ picosa especial + papa frita.</p>
+                            <p class="text-warning fw-bold">S/. 19.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Alas Buffalo', 19.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/alitas_combinadas.jpg" class="card-img-top" alt="Alitas Combinadas">
+                        <div class="card-body">
+                            <h5 class="card-title">Alitas Combinadas</h5>
+                            <p class="card-text">4 alitas combinadas con una porción de Papi Chori.</p>
+                            <p class="text-warning fw-bold">S/. 23.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Alitas Combinadas', 23.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselAlasSalsas" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselAlasSalsas" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="category-box" id="combos">
+        <div class="menu-title">6. Combos Alocados</div>
+
+        <div id="carouselCombos" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- ITEM 1 -->
+                <div class="carousel-item active">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/combo_grande_alitas.jpg" class="card-img-top" alt="Combo Grande de Alitas">
+                        <div class="card-body">
+                            <h5 class="card-title">Porción Grande de Alitas</h5>
+                            <p class="card-text">
+                                9 alitas (elige 2 sabores)<br>
+                                Porción grande de papas.
+                            </p>
+                            <p class="text-warning fw-bold">S/. 25.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Porción Grande de Alitas', 25.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/combo_familiar_alitas.jpg" class="card-img-top" alt="Combo Familiar de Alitas">
+                        <div class="card-body">
+                            <h5 class="card-title">Porción Familiar de Alitas</h5>
+                            <p class="card-text">
+                                12 alitas (elige 3 sabores)<br>
+                                Porción grande de papas + arroz chaufa.
+                            </p>
+                            <p class="text-warning fw-bold">S/. 30.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Porción Familiar de Alitas', 30.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 3 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/combo_extra_grande.jpg" class="card-img-top" alt="Combo Extra Grande de Alitas">
+                        <div class="card-body">
+                            <h5 class="card-title">Porción Extra Grande de Alitas</h5>
+                            <p class="card-text">
+                                18 alitas (elige 3 sabores)<br>
+                                Salchipapa de chorizo<br>
+                                Arroz chaufa + gaseosa Inca Kola.
+                            </p>
+                            <p class="text-warning fw-bold">S/. 55.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Porción Extra Grande de Alitas', 55.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 4 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/hamburguealitas.jpg" class="card-img-top" alt="Hamburguealitas">
+                        <div class="card-body">
+                            <h5 class="card-title">Hamburguealitas</h5>
+                            <p class="card-text">
+                                6 alitas (elige el sabor)<br>
+                                Porción mediana de papas<br>
+                                Hamburguesa (carne, pollo o chorizo)<br>
+                                2 tiras de tocino.
+                            </p>
+                            <p class="text-warning fw-bold">S/. 27.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Hamburguealitas', 27.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCombos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCombos" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="category-box" id="bebidas">
+        <div class="menu-title">Bebidas</div>
+
+        <!-- GASEOSAS -->
+        <h5 class="text-light mt-3">Gaseosas</h5>
+        <div id="carouselGaseosas" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/kola_real.jpg" class="card-img-top" alt="Kola Real">
+                        <div class="card-body">
+                            <h5 class="card-title">Kola Real 600 ml</h5>
+                            <p class="card-text">Refresco clásico para acompañar tus comidas.</p>
+                            <p class="text-warning fw-bold">S/. 1.50</p>
+                            <button class="btn btn-warning" onclick="addToCart('Kola Real', 1.50)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repite el mismo patrón para los otros 4 -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/inca_kola.jpg" class="card-img-top" alt="Inca Kola">
+                        <div class="card-body">
+                            <h5 class="card-title">Inca Kola 600 ml</h5>
+                            <p class="card-text">El sabor del Perú en botella.</p>
+                            <p class="text-warning fw-bold">S/. 4.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Inca Kola 600 ml', 4.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/coca_kola.jpg" class="card-img-top" alt="Coca Kola">
+                        <div class="card-body">
+                            <h5 class="card-title">Coca Kola 600 ml</h5>
+                            <p class="card-text">Destapa Felicidad.</p>
+                            <p class="text-warning fw-bold">S/. 4.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Coca Kola 600 ml', 4.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/cola-escosesa.jpg" class="card-img-top" alt="Cola Escosesa">
+                        <div class="card-body">
+                            <h5 class="card-title">Cola Escosesa 600 ml</h5>
+                            <p class="card-text">El Verdadero sabor Arequipeño.</p>
+                            <p class="text-warning fw-bold">S/. 3.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Cola Escosesa 600 ml', 4.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/agua.jpg" class="card-img-top" alt="Agua Embotellada">
+                        <div class="card-body">
+                            <h5 class="card-title">Agua San Luis 1L</h5>
+                            <p class="card-text">Bébete la vida.</p>
+                            <p class="text-warning fw-bold">S/. 3.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Cola Escosesa 600 ml', 3.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaseosas" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselGaseosas" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <!-- LIMONADAS -->
+        <h5 class="text-light mt-4">Limonadas de Casa</h5>
+        <div id="carouselLimonadas" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/limonada_americana.jpg" class="card-img-top" alt="Limonada Americana">
+                        <div class="card-body">
+                            <h5 class="card-title">Limonada Americana 1.2L</h5>
+                            <p class="card-text">Refrescante limonada clásica para calmar la sed.</p>
+                            <p class="text-warning fw-bold">S/. 10.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Limonada Americana 1.2L', 10.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/limonada_menta.jpg" class="card-img-top" alt="Limonada Menta">
+                        <div class="card-body">
+                            <h5 class="card-title">Limonada Americana Menta 1.2L</h5>
+                            <p class="card-text">Limonada refrescante con un toque de menta natural.</p>
+                            <p class="text-warning fw-bold">S/. 12.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Limonada Menta 1.2L', 12.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/limonada_helada.jpg" class="card-img-top" alt="Limonada Helada">
+                        <div class="card-body">
+                            <h5 class="card-title">Limonada Americana Helada 1.2L</h5>
+                            <p class="card-text">Limonada con hielo triturado para mayor frescura.</p>
+                            <p class="text-warning fw-bold">S/. 12.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Limonada Helada 1.2L', 12.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/limonada_menta_helada.jpg" class="card-img-top" alt="Limonada Menta Helada">
+                        <div class="card-body">
+                            <h5 class="card-title">Limonada Menta Helada 1.2L</h5>
+                            <p class="card-text">Refrescante mezcla de menta, limón y hielo.</p>
+                            <p class="text-warning fw-bold">S/. 14.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Limonada Menta Helada 1.2L', 14.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/refresco_pina.jpg" class="card-img-top" alt="Refresco de Piña">
+                        <div class="card-body">
+                            <h5 class="card-title">Refresco de Piña Concentrada 1.2L</h5>
+                            <p class="card-text">Refresco tropical de piña para acompañar cualquier plato.</p>
+                            <p class="text-warning fw-bold">S/. 13.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Refresco de Piña 1.2L', 13.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselLimonadas" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselLimonadas" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <!-- MATES -->
+        <h5 class="text-light mt-4">Mates de Casa</h5>
+        <div id="carouselMates" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/mate_cacao.jpg" class="card-img-top" alt="Mate de Cacao">
+                        <div class="card-body">
+                            <h5 class="card-title">Mate de Cacao 2L</h5>
+                            <p class="card-text">Infusión de cacao natural caliente o fría, ideal para acompañar cualquier comida.</p>
+                            <p class="text-warning fw-bold">S/. 8.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Mate de Cacao 2L', 8.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/mate_manzanilla.jpg" class="card-img-top" alt="Mate de Manzanilla">
+                        <div class="card-body">
+                            <h5 class="card-title">Mate de Manzanilla 2L</h5>
+                            <p class="card-text">Relajante bebida de manzanilla casera, lista para compartir.</p>
+                            <p class="text-warning fw-bold">S/. 8.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Mate de Manzanilla 2L', 8.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/mate_anis.jpg" class="card-img-top" alt="Mate de Anís">
+                        <div class="card-body">
+                            <h5 class="card-title">Mate de Anís 2L</h5>
+                            <p class="card-text">Digestiva y suave bebida caliente de anís, perfecta para después de comer.</p>
+                            <p class="text-warning fw-bold">S/. 7.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Mate de Anís 2L', 7.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/cafe.jpg" class="card-img-top" alt="Café">
+                        <div class="card-body">
+                            <h5 class="card-title">Café 2L</h5>
+                            <p class="card-text">Café casero en jarra de 2 litros, ideal para reuniones o acompañar tu comida.</p>
+                            <p class="text-warning fw-bold">S/. 9.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Café 2L', 9.00)">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMates" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselMates" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+
+        <!-- CÓCTELES -->
+        <h5 class="text-light mt-4">Cócteles</h5>
+        <div id="carouselCocteles" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- Macchu Picchu -->
+                <div class="carousel-item active">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/macchu_picchu.jpg" class="card-img-top" alt="Macchu Picchu">
+                        <div class="card-body">
+                            <h5 class="card-title">Macchu Picchu</h5>
+                            <p class="card-text">Cóctel clásico nacional en presentaciones vaso, grande o jarra.</p>
+                            <p class="text-warning fw-bold">Vaso Regular: S/. 8.00 — Vaso Grande: S/. 14.00 — Jarra 1.2L: S/. 21.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Macchu Picchu - Vaso Regular', 8.00)">Agregar Vaso Regular</button>
+                            <button class="btn btn-warning" onclick="addToCart('Macchu Picchu - Vaso Grande', 14.00)">Agregar Vaso Grande</button>
+                            <button class="btn btn-warning" onclick="addToCart('Macchu Picchu - Jarra 1.2L', 21.00)">Agregar Jarra 1.2L</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pisco Sour -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/pisco_sour.jpg" class="card-img-top" alt="Pisco Sour">
+                        <div class="card-body">
+                            <h5 class="card-title">Pisco Sour</h5>
+                            <p class="card-text">Clásico cóctel peruano, ideal para acompañar tu comida.</p>
+                            <p class="text-warning fw-bold">Vaso Regular: S/. 8.00 — Vaso Grande: S/. 14.00 — Jarra 1.2L: S/. 21.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Pisco Sour - Vaso Regular', 8.00)">Agregar Vaso Regular</button>
+                            <button class="btn btn-warning" onclick="addToCart('Pisco Sour - Vaso Grande', 14.00)">Agregar Vaso Grande</button>
+                            <button class="btn btn-warning" onclick="addToCart('Pisco Sour - Jarra 1.2L', 21.00)">Agregar Jarra 1.2L</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cuba Libre -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/cuba_libre.jpg" class="card-img-top" alt="Cuba Libre">
+                        <div class="card-body">
+                            <h5 class="card-title">Cuba Libre</h5>
+                            <p class="card-text">Cóctel con ron y gaseosa, refrescante y vibrante.</p>
+                            <p class="text-warning fw-bold">Vaso Regular: S/. 8.00 — Vaso Grande: S/. 14.00 — Jarra 1.2L: S/. 21.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Cuba Libre - Vaso Regular', 8.00)">Agregar Vaso Regular</button>
+                            <button class="btn btn-warning" onclick="addToCart('Cuba Libre - Vaso Grande', 14.00)">Agregar Vaso Grande</button>
+                            <button class="btn btn-warning" onclick="addToCart('Cuba Libre - Jarra 1.2L', 21.00)">Agregar Jarra 1.2L</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mojitos -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/mojitos.jpg" class="card-img-top" alt="Mojitos">
+                        <div class="card-body">
+                            <h5 class="card-title">Mojitos</h5>
+                            <p class="card-text">Cóctel con ron, hierbabuena y limón. Refrescante y delicioso.</p>
+                            <p class="text-warning fw-bold">Vaso Regular: S/. 8.00 — Vaso Grande: S/. 14.00 — Jarra 1.2L: S/. 21.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Mojitos - Vaso Regular', 8.00)">Agregar Vaso Regular</button>
+                            <button class="btn btn-warning" onclick="addToCart('Mojitos - Vaso Grande', 14.00)">Agregar Vaso Grande</button>
+                            <button class="btn btn-warning" onclick="addToCart('Mojitos - Jarra 1.2L', 21.00)">Agregar Jarra 1.2L</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Laguna Azul -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/laguna_azul.jpg" class="card-img-top" alt="Laguna Azul">
+                        <div class="card-body">
+                            <h5 class="card-title">Laguna Azul</h5>
+                            <p class="card-text">Cóctel exótico de sabor frutal y color llamativo.</p>
+                            <p class="text-warning fw-bold">Vaso Regular: S/. 9.00 — Vaso Grande: S/. 17.00 — Jarra 1.2L: S/. 25.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Laguna Azul - Vaso Regular', 9.00)">Agregar Vaso Regular</button>
+                            <button class="btn btn-warning" onclick="addToCart('Laguna Azul - Vaso Grande', 17.00)">Agregar Grande</button>
+                            <button class="btn btn-warning" onclick="addToCart('Laguna Azul - Jarra 1.2L', 25.00)">Agregar Jarra 1.2L</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Piña Colada -->
+                <div class="carousel-item">
+                    <div class="card bg-dark text-white text-center">
+                        <img src="img/pina_colada.jpg" class="card-img-top" alt="Piña Colada">
+                        <div class="card-body">
+                            <h5 class="card-title">Piña Colada</h5>
+                            <p class="card-text">Cóctel dulce y tropical a base de piña y crema de coco.</p>
+                            <p class="text-warning fw-bold">Vaso Regular: S/. 9.00 — Vaso Grande: S/. 17.00 — Jarra 1.2L: S/. 25.00</p>
+                            <button class="btn btn-warning" onclick="addToCart('Piña Colada - Vaso Regular', 9.00)">Agregar Vaso Regular</button>
+                            <button class="btn btn-warning" onclick="addToCart('Piña Colada - Vaso Grande', 17.00)">Agregar Vaso Grande</button>
+                            <button class="btn btn-warning" onclick="addToCart('Piña Colada - Jarra 1.2L', 25.00)">Agregar Jarra 1.2L</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselCocteles" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselCocteles" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <!-- PROMOCIONES -->
+        <div class="mt-3 text-center text-white">
+            <h6 class="fw-bold">Promociones</h6>
+            <p><strong>Promo 2 Cócteles:</strong> S/. 15.00 (solo bebidas iguales)</p>
+            <p><strong>Promo +3 Cócteles:</strong> S/. 7.00 cada uno (bebidas de S/8)</p>
+            <p><strong>Promo 8 Cócteles:</strong> S/. 55.00</p>
+        </div>
+
+
+    </div>
+
+    <!-- Unámonos -->
+    <div id="page-container" class="et-animated-content" style="padding-top: 122px; overflow-y: hidden; margin-top: -1px;">
+        <div id="et-boc" class="et-boc">
+
+
+
+            <!-- #main-header -->
+            <div id="et-main-area">
+
+                <div id="main-content">
+
+
+
+                    <article id="post-971" class="post-971 page type-page status-publish hentry">
+
+
+                        <div class="entry-content">
+                            <div class="et-l et-l--post">
+                                <div class="et_builder_inner_content et_pb_gutters3">
+                                    <div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular">
+
+
+
+
+
+
+                                        <div class="et_pb_row et_pb_row_0">
+                                            <div class="et_pb_column et_pb_column_1_2 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
+
+
+
+
+                                                <div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+                                                    <div class="et_pb_text_inner"><h2>Helping children and youth reach their potential through education</h2></div>
+                                                </div><div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+
+
+
+
+                                                <div class="et_pb_text_inner"><p>With each donation, we continue to strengthen essential rehabilitation and education programs.</p></div>
+                                            </div>
+                                            </div><div class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+
+
+
+                                            <div class="et_pb_module et_pb_code et_pb_code_0">
+
+
+
+
+                                                <div class="et_pb_code_inner"><afrus-form form-id="e0acbfe8-aa4f-4733-9edc-9c2987d9ce7a" preview="false"><div id="afrus-container"><div style="display: flex; justify-content: center; align-items: center;"><div style="width: 100%;"><form id="form" class="form" style="text-align: center; font-family: Roboto, Arial, sans-serif; color: rgb(255, 255, 255); border: 0px solid rgb(255, 255, 255); border-radius: 18px; background-color: rgb(41, 41, 41); display: flex; flex-direction: column; justify-content: flex-start; align-items: center; width: 100%;"><header class="header" style="display: flex; flex-direction: column; border-radius: 18px 18px 0px 0px; font-family: Roboto, Arial, sans-serif; width: 100%;"><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 200px)); width: 100%; justify-content: end;"></div><div style="position: relative; margin-bottom: 42px;"><div style="position: absolute; top: 0px; left: 18px;"><button><img alt="arrow_back" width="30" height="30" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJpY29uIGljb24tdGFibGVyIGljb24tdGFibGVyLWFycm93LW5hcnJvdy1sZWZ0IiB3aWR0aD0iNDQiIGhlaWdodD0iNDQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iIzAwMDAwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4KICA8cGF0aCBzdHJva2U9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz4KICA8cGF0aCBkPSJNNSAxMmwxNCAwIiAvPgogIDxwYXRoIGQ9Ik01IDEybDQgNCIgLz4KICA8cGF0aCBkPSJNNSAxMmw0IC00IiAvPgo8L3N2Zz4K"></button></div></div></header><div style="padding-inline: 30px; width: 100%;"><div><div style="padding: 2px 10px; display: flex; flex-direction: column; width: 100%;"><label class="label-form" style="text-align: left; font-weight: 400; font-size: 16px; line-height: 2; text-overflow: ellipsis; min-width: 70px; display: inline-block;">Nombre completo<i class="icon-required">*</i></label><input name="full_name" type="text" maxlength="100" required="" placeholder="Nombre completo" class="input" value="" style="width: 100%; border: 0px solid rgb(255, 255, 255); border-radius: 500px; font-size: 16px; color: rgb(74, 74, 74); font-family: Roboto, Arial, sans-serif; max-width: 100%; min-height: 40px; padding: 10px 20px;"></div></div><div><div style="padding: 2px 10px; display: flex; flex-direction: column; width: 100%;"><label class="label-form" style="text-align: left; font-weight: 400; font-size: 16px; line-height: 2; text-overflow: ellipsis; min-width: 70px; display: inline-block;">Correo electrónico<i class="icon-required">*</i></label><input name="email" type="text" maxlength="100" required="" placeholder="Correo electrónico" class="input" value="" style="width: 100%; border: 0px solid rgb(255, 255, 255); border-radius: 500px; font-size: 16px; color: rgb(74, 74, 74); font-family: Roboto, Arial, sans-serif; max-width: 100%; min-height: 40px; padding: 10px 20px;"></div></div></div><div style="padding-inline: 30px; width: 100%;"><div><div style="padding: 2px 10px; display: flex; flex-direction: column; width: 100%;"><label style="text-align: left; font-weight: 400; font-size: 16px; line-height: 2; text-overflow: ellipsis; min-width: 70px; display: inline-block;">Tipo de documento<i class="icon-required">*</i></label><select id="document" name="document_type" style="width: 100%; border: 0px solid rgb(255, 255, 255); border-radius: 500px; font-size: 16px; color: rgb(74, 74, 74); font-family: Roboto, Arial, sans-serif; max-width: 100%; min-height: 40px; padding: 10px 20px;"><option value="" style="color: rgb(0, 0, 0); font-family: &quot;Roboto Arial&quot;, sans-serif;">Seleccionar</option><option value="1" style="color: rgb(0, 0, 0); font-family: &quot;Roboto Arial&quot;, sans-serif;">DNI</option><option value="2" style="color: rgb(0, 0, 0); font-family: &quot;Roboto Arial&quot;, sans-serif;">Pasaporte</option><option value="5" style="color: rgb(0, 0, 0); font-family: &quot;Roboto Arial&quot;, sans-serif;">Carnet de extranjeria</option><option value="13" style="color: rgb(0, 0, 0); font-family: &quot;Roboto Arial&quot;, sans-serif;">RUC</option></select></div></div><div style="padding: 2px 10px; display: flex; flex-direction: column; width: 100%;"><label class="label-form" style="text-align: left; font-weight: 400; font-size: 16px; line-height: 2; text-overflow: ellipsis; min-width: 70px; display: inline-block;">Documento<i class="icon-required">*</i></label><input name="document" type="text" maxlength="50" required="" placeholder="Documento" class="input" value="" style="width: 100%; border: 0px solid rgb(255, 255, 255); border-radius: 500px; font-size: 16px; color: rgb(74, 74, 74); font-family: Roboto, Arial, sans-serif; max-width: 100%; min-height: 40px; padding: 10px 20px;"></div></div><div style="padding-inline: 30px; width: 100%;"><div style="display: flex; flex-direction: column; padding: 0px 20px;"><div class="flex mt-6"><input id="termsCheckbox" name="terms_and_conditions" type="checkbox" class="_termCheckbox_87lb3_1" value="false"><label for="termsCheckbox" class="flex px-2 text-left" style="text-decoration: underline; text-wrap: wrap; color: rgb(255, 255, 255); overflow-wrap: break-word; white-space-collapse: collapse; margin-left: 6px; word-break: break-word;">He leído ya acepto los términos y condiciones <img alt="show_more" width="20" height="20" class="mx-2 cursor-pointer" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIuNDIwMTIgMTIuNzEzMkMyLjI4Mzk0IDEyLjQ5NzUgMi4yMTU4NCAxMi4zODk3IDIuMTc3NzIgMTIuMjIzNEMyLjE0OTA5IDEyLjA5ODUgMi4xNDkwOSAxMS45MDE1IDIuMTc3NzIgMTEuNzc2NkMyLjIxNTg0IDExLjYxMDMgMi4yODM5NCAxMS41MDI1IDIuNDIwMTIgMTEuMjg2OEMzLjU0NTUzIDkuNTA0ODQgNi44OTU0IDUgMTIuMDAwNCA1QzE3LjEwNTQgNSAyMC40NTUzIDkuNTA0ODQgMjEuNTgwNyAxMS4yODY4QzIxLjcxNjkgMTEuNTAyNSAyMS43ODUgMTEuNjEwMyAyMS44MjMxIDExLjc3NjZDMjEuODUxNyAxMS45MDE1IDIxLjg1MTcgMTIuMDk4NSAyMS44MjMxIDEyLjIyMzRDMjEuNzg1IDEyLjM4OTcgMjEuNzE2OSAxMi40OTc1IDIxLjU4MDcgMTIuNzEzMkMyMC40NTUzIDE0LjQ5NTIgMTcuMTA1NCAxOSAxMi4wMDA0IDE5QzYuODk1NCAxOSAzLjU0NTUzIDE0LjQ5NTIgMi40MjAxMiAxMi43MTMyWiIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTEyLjAwMDQgMTVDMTMuNjU3MyAxNSAxNS4wMDA0IDEzLjY1NjkgMTUuMDAwNCAxMkMxNS4wMDA0IDEwLjM0MzEgMTMuNjU3MyA5IDEyLjAwMDQgOUMxMC4zNDM1IDkgOS4wMDA0IDEwLjM0MzEgOS4wMDA0IDEyQzkuMDAwNCAxMy42NTY5IDEwLjM0MzUgMTUgMTIuMDAwNCAxNVoiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo="></label></div></div></div><div style="padding-inline: 30px; width: 100%;"><div style="padding: 10px;"><button type="submit" class="flex justify-center items-center disabled:opacity-75" style="border: 0px solid; border-radius: 500px; width: 100%; padding: 0px 16px; min-height: 60px; font-size: 16px; font-weight: 500; text-transform: uppercase; background-color: rgb(120, 213, 215); color: rgb(255, 255, 255); cursor: pointer; text-align: center;"><span style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif;">Una vez - (S/ 30)</span></button></div></div><div style="padding-inline: 30px; width: 100%;"><div style="color: rgb(255, 255, 255); font-size: 12px; letter-spacing: 0px; line-height: 2; margin-top: 0px; display: flex; flex-direction: column; align-items: center; padding: 10px;">Tu donación llega 100% a la Asociación Unámonos</div><div class="footerMessage"><a href="https://afrus.org/donacion-segura" target="_blank" rel="noreferrer" style="text-decoration: none;"><div><p style="color: #fff; display: flex; align-items: center;">
+                                                    Transacción&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAhCAYAAAAlK6DZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGCSURBVHgB7ZaBbYMwEEWPqANkhIyQDUo3YINkg2SDOBt0A+gE6QbQCWgncDMB2eB6F9uqi8AcBKuKlC99gfDZj7OT4wBGChFT8itZk3PyCmKJFs/IJXaLn29gDtFCS/KB3KBMenL2dgvLwOI8dgrzr/B0COSy0j2LcLaK42y8Qpk0eYN+9vj7w2gCWWUO5s2TQn3l5DX0DDb2RdLAzkyBXvXUWqsiv5PfkiS5QCS1oUeCVRBZC/gHPaAP6P1CE64+dHUlriCfYX6tyO7Td+FyVuM0KSmRYvfevJq39wvia+3dnxn6CfH17N2fGFpARNF2bsGcqdPHwn5NKognv3eqiPft/jJHiCCbZeo9KtoBJY6TgjCQ2x/txWs35heHubM9wN+zfOmMQtOi3JwpmgZPFOsmSIuFEgJrGBIFrbC/De2FojnDvBWjUdp4C8HKi8864uXA1psXASif/w67j4O7/yVMFZpirVEm7pf3MIfQbHcxAFM3ZTcA36IpJI297sbCfgDY8zLxJtVl6AAAAABJRU5ErkJggg==" style="width: 20px; height: 20px;">&nbsp;segura.&nbsp;Powered&nbsp;by&nbsp;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAnCAYAAACbgcH8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKlSURBVHgB1ZjhcdswDIXhXv/XG5QjeINygzoTxJ2g7gRWJnA2sDqB0wnkTuARmE4Qb/AKXegEVUkQkti79LvTUbYeQEgUAYpEIwAQUBdPE3hnFXIHO24c/S9wwA71OQj/+/jfimrBzlrUxyUeSEc1YEce9WmE/+Pgmqe5sJM16hKE703qOh9Leqsgn40aeqsoQT8hvvMpForDDTefEpd+LBaLB6HzNC4Vntj+MdquuTlmdC3rvpAV6CmukwFjGl746Cw6S9BHxdGt0AVM42y8cVsKRHpGXzkYdRa2wte9oru1BB0UBy5qHOavQ/rJtoz+lvG3qssFvFM6aYSuVoXcC58NDH0PA9aeXv+/E7qaOMMop1Mg9KcnJ582SQOeK6gfHEGxsWajLvWUs4EIXWnyJSeNwc4LbWfR9cKzIlwZhq/nTAqFYAJeJ6Ur9oF6Kc4VgvYF+0ZotUm57b9cvNLXT3Gu6R6vpTkHXz9xc1EkH8X5SdF9vg5HLkfK97n0pNZKR6PmAwy1wpwjYXwvM0EHxfZovLmDdGiqSNyuoNNkAt4V7JyII2Q0AcN5A/0OZeXS1glP8XojDk3fczDe3DY3hJ1i5A2jMpYAW6UNpLx3porE51vUQU6+1qLLBa4Zr4UuYB4yM2kfzwcqAX34A14nZSkFlrA+AEcWUCcFalgr7T1ZgZ56XpaJmPYxEIz2L7oh2te45yb3jfbAZflGaB3ZubDtJdq13OQm2YZ132ksUIafZoKpKY55X/D9jY/UkvNOdO7Jtu9xGiyq9or2huaAvytaEO/kmH0+ucFjW1/MCHqYAqfue4xbxVUI/FoBZUH4Cjtyc2an6BqqCZ6H1MXzsanOYhfoXwK9+AyRhWTeTlKklD1ytPTn55HG3cDuQ0Lza0xO/g3mGK8It6TbAwAAAABJRU5ErkJggg==" style="width: 20px; height: 20px;">&nbsp;afrus
+                                                </p></div></a></div></div></form></div></div></div></afrus-form></div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                        </div>
+
+
+                                    </div>		</div>
+                            </div>
+                        </div>
+
+
+                    </article>
+
+
+
+                </div>
+
+                <footer class="et-l et-l--footer">
+                    <div class="et_builder_inner_content et_pb_gutters3"><div class="et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular">
+                        <div class="et_pb_row et_pb_row_0_tb_footer et_pb_equal_columns">
+                            <div class="et_pb_column et_pb_column_1_2 et_pb_column_0_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+                                <div class="et_pb_module et_pb_text et_pb_text_0_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+                                </div>
+                            </div>
+                            <div class="et_pb_column et_pb_column_1_2 et_pb_column_1_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                        </div>
+                        </div>
+                    </div>		</div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<footer id="footer" class="footer bg-dark text-white px-3">
+    <div>Contáctanos</div>
+    <div>Síguenos: 🟧 📸 🎵</div>
+    <div>📞</div>
+</footer>
+
+<!-- MODAL DE PAGO / CARRITO -->
+<div class="modal fade" id="modalPago" tabindex="-1" aria-labelledby="modalPagoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalPagoLabel">🛒 Carrito de Compras</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="detalleCarrito" class="list-group mb-3"></ul>
+                <p id="totalFinal" class="fw-bold text-end">Total: S/ 0.00</p>
+
+                <form>
+                    <div class="mb-2">
+                        <label class="form-label">Nombre o Alias:</label>
+                        <input type="text" class="form-control" required />
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label">Género:</label>
+                        <select class="form-select" required>
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                        </select>
+                    </div>
+
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" required />
+                        <label class="form-check-label">
+                            Soy mayor de edad o realizo la compra bajo supervisión de un adulto.
+                        </label>
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label">Correo electrónico:</label>
+                        <input type="email" class="form-control" required />
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label">Medio de pago:</label>
+                        <select class="form-select" id="medioPago">
+                            <option disabled selected>Selecciona</option>
+                            <option>Yape</option>
+                            <option>Plin</option>
+                            <option>Efectivo</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-2" id="uploadVoucher" style="display: none;">
+                        <label class="form-label">Adjuntar voucher:</label>
+                        <input type="file" class="form-control" />
+                    </div>
+
+                    <div class="mb-2">
+                        <label class="form-label">Tipo de entrega:</label>
+                        <select class="form-select" id="tipoEntrega">
+                            <option disabled selected>Selecciona</option>
+                            <option>Delivery</option>
+                            <option>Recojo en Tienda</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-2" id="datosDelivery" style="display: none;">
+                        <label class="form-label">Dirección:</label>
+                        <input type="text" class="form-control" />
+                        <label class="form-label mt-2">Referencia:</label>
+                        <input type="text" class="form-control" />
+                    </div>
+
+                    <div id="mensajeRecojo" class="alert alert-info mt-2" style="display: none;">
+                        Tu pedido estará listo en 15 minutos para recoger.
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button class="btn btn-success">Finalizar Pedido</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- BOTÓN DEL CARRITO -->
+<button id="carritoBtn" class="cart-button">
+    🛒 Ver Carrito (S/ <span id="cart-total">0.00</span>)
+</button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
